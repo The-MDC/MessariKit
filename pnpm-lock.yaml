@@ -13,7 +13,7 @@ importers:
         version: 1.9.4
       '@redocly/cli':
         specifier: ^2.0.6
-        version: 2.0.6(@opentelemetry/api@1.9.0)(ajv@8.17.1)(core-js@3.40.0)
+        version: 2.0.6(@opentelemetry/api@1.9.0)(ajv@8.17.1)(core-js@3.40.0)(supports-color@9.4.0)
       '@types/js-yaml':
         specifier: ^4.0.9
         version: 4.0.9
@@ -40,7 +40,7 @@ importers:
         version: 5.7.3
       vitest:
         specifier: ^3.0.7
-        version: 3.0.7(@types/node@20.17.19)(tsx@4.19.3)
+        version: 3.0.7(@types/node@20.17.19)(supports-color@9.4.0)(tsx@4.19.3)
 
   packages/api:
     devDependencies:
@@ -973,8 +973,8 @@ packages:
     resolution: {integrity: sha512-ZUKRh6/kUFoAiTAtTYPZJ3hw9wNxx+BIBOijnlG9PnrJsCcSjs1wyyD6vJpaYtgnzDrKYRSqf3OO6Rfa93xsRg==}
     engines: {node: '>= 0.4'}
 
-  handlebars@4.7.8:
-    resolution: {integrity: sha512-vafaFqs8MZkRrSX7sFVUdo3ap/eNiLnb4IakshzvP56X5Nr1iGKAIqdX6tMlm6HcNRIkr6AxO5jFEoJzzpT8aQ==}
+  handlebars@4.7.10:
+    resolution: {integrity: sha512-P5VJMVM7qgBn6vjXMw8WG9uVI+ncf2pi72j4de4yz5ZULLj2RGqLYaKOYGsgyrViQ0tePOVlN1tDCCXXtFqXKg==}
     engines: {node: '>=0.4.7'}
     hasBin: true
 
@@ -2015,7 +2015,7 @@ snapshots:
       require-from-string: 2.0.2
       uri-js-replace: 1.0.1
 
-  '@redocly/cli@2.0.6(@opentelemetry/api@1.9.0)(ajv@8.17.1)(core-js@3.40.0)':
+  '@redocly/cli@2.0.6(@opentelemetry/api@1.9.0)(ajv@8.17.1)(core-js@3.40.0)(supports-color@9.4.0)':
     dependencies:
       '@opentelemetry/exporter-trace-otlp-http': 0.202.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/resources': 2.0.1(@opentelemetry/api@1.9.0)
@@ -2030,16 +2030,16 @@ snapshots:
       dotenv: 16.4.7
       form-data: 4.0.4
       glob: 11.0.3
-      handlebars: 4.7.8
-      https-proxy-agent: 7.0.6
+      handlebars: 4.7.10
+      https-proxy-agent: 7.0.6(supports-color@9.4.0)
       mobx: 6.13.6
       pluralize: 8.0.0
       react: 19.0.0
       react-dom: 19.0.0(react@19.0.0)
-      redoc: 2.5.0(core-js@3.40.0)(mobx@6.13.6)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(styled-components@6.1.15(react-dom@19.0.0(react@19.0.0))(react@19.0.0))
+      redoc: 2.5.0(core-js@3.40.0)(mobx@6.13.6)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(styled-components@6.1.15(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(supports-color@9.4.0)
       semver: 7.7.1
       set-cookie-parser: 2.7.1
-      simple-websocket: 9.1.0
+      simple-websocket: 9.1.0(supports-color@9.4.0)
       styled-components: 6.1.15(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       undici: 6.21.1
       yargs: 17.0.1
@@ -2059,12 +2059,12 @@ snapshots:
     dependencies:
       json-schema-to-ts: 2.7.2
 
-  '@redocly/openapi-core@1.31.2':
+  '@redocly/openapi-core@1.31.2(supports-color@9.4.0)':
     dependencies:
       '@redocly/ajv': 8.11.2
       '@redocly/config': 0.21.0
       colorette: 1.4.0
-      https-proxy-agent: 7.0.6
+      https-proxy-agent: 7.0.6(supports-color@9.4.0)
       js-levenshtein: 1.1.6
       js-yaml: 4.1.0
       minimatch: 5.1.6
@@ -2371,9 +2371,11 @@ snapshots:
 
   csstype@3.1.3: {}
 
-  debug@4.4.0:
+  debug@4.4.0(supports-color@9.4.0):
     dependencies:
       ms: 2.1.3
+    optionalDependencies:
+      supports-color: 9.4.0
 
   decko@1.2.0: {}
 
@@ -2559,7 +2561,7 @@ snapshots:
 
   gopd@1.2.0: {}
 
-  handlebars@4.7.8:
+  handlebars@4.7.10:
     dependencies:
       minimist: 1.2.8
       neo-async: 2.6.2
@@ -2582,10 +2584,10 @@ snapshots:
 
   http2-client@1.3.5: {}
 
-  https-proxy-agent@7.0.6:
+  https-proxy-agent@7.0.6(supports-color@9.4.0):
     dependencies:
       agent-base: 7.1.3
-      debug: 4.4.0
+      debug: 4.4.0(supports-color@9.4.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -2916,9 +2918,9 @@ snapshots:
     dependencies:
       picomatch: 2.3.1
 
-  redoc@2.5.0(core-js@3.40.0)(mobx@6.13.6)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(styled-components@6.1.15(react-dom@19.0.0(react@19.0.0))(react@19.0.0)):
+  redoc@2.5.0(core-js@3.40.0)(mobx@6.13.6)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(styled-components@6.1.15(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(supports-color@9.4.0):
     dependencies:
-      '@redocly/openapi-core': 1.31.2
+      '@redocly/openapi-core': 1.31.2(supports-color@9.4.0)
       classnames: 2.5.1
       core-js: 3.40.0
       decko: 1.2.0
@@ -3042,9 +3044,9 @@ snapshots:
 
   simple-wcswidth@1.0.1: {}
 
-  simple-websocket@9.1.0:
+  simple-websocket@9.1.0(supports-color@9.4.0):
     dependencies:
-      debug: 4.4.0
+      debug: 4.4.0(supports-color@9.4.0)
       queue-microtask: 1.2.3
       randombytes: 2.1.0
       readable-stream: 3.6.2
@@ -3182,10 +3184,10 @@ snapshots:
 
   util-deprecate@1.0.2: {}
 
-  vite-node@3.0.7(@types/node@20.17.19)(tsx@4.19.3):
+  vite-node@3.0.7(@types/node@20.17.19)(supports-color@9.4.0)(tsx@4.19.3):
     dependencies:
       cac: 6.7.14
-      debug: 4.4.0
+      debug: 4.4.0(supports-color@9.4.0)
       es-module-lexer: 1.6.0
       pathe: 2.0.3
       vite: 6.2.0(@types/node@20.17.19)(tsx@4.19.3)
@@ -3213,7 +3215,7 @@ snapshots:
       fsevents: 2.3.3
       tsx: 4.19.3
 
-  vitest@3.0.7(@types/node@20.17.19)(tsx@4.19.3):
+  vitest@3.0.7(@types/node@20.17.19)(supports-color@9.4.0)(tsx@4.19.3):
     dependencies:
       '@vitest/expect': 3.0.7
       '@vitest/mocker': 3.0.7(vite@6.2.0(@types/node@20.17.19)(tsx@4.19.3))
@@ -3223,7 +3225,7 @@ snapshots:
       '@vitest/spy': 3.0.7
       '@vitest/utils': 3.0.7
       chai: 5.2.0
-      debug: 4.4.0
+      debug: 4.4.0(supports-color@9.4.0)
       expect-type: 1.1.0
       magic-string: 0.30.17
       pathe: 2.0.3
@@ -3233,7 +3235,7 @@ snapshots:
       tinypool: 1.0.2
       tinyrainbow: 2.0.0
       vite: 6.2.0(@types/node@20.17.19)(tsx@4.19.3)
-      vite-node: 3.0.7(@types/node@20.17.19)(tsx@4.19.3)
+      vite-node: 3.0.7(@types/node@20.17.19)(supports-color@9.4.0)(tsx@4.19.3)
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@types/node': 20.17.19
